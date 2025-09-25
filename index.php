@@ -22,8 +22,7 @@ $users = $db->query("SELECT id, COALESCE(NULLIF(name_ru,''), name_lat) AS label,
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Пациенты</title><link rel="stylesheet" href="assets/style.css"></head>
 <body>
 <div class="container">
-  <h1>Пациенты</h1>
-  <a class="btn" href="#" onclick="document.getElementById('newUser').style.display='block';return false;">+ Новый пользователь</a>
+  <h1>Веб-приложение учёта прививок</h1>
   <table class="table">
     <tr><th>Имя</th><th>Дата рождения</th><th>Действия</th></tr>
     <?php foreach($users as $u): ?>
@@ -31,7 +30,7 @@ $users = $db->query("SELECT id, COALESCE(NULLIF(name_ru,''), name_lat) AS label,
         <td><a href="patient.php?id=<?=$u['id']?>"><?=htmlspecialchars($u['label'])?></a></td>
         <td><?=htmlspecialchars($u['birthdate'])?></td>
         <td>
-          <a class="small" href="patient.php?id=<?=$u['id']?>">Открыть</a>
+          <a class="small" href="patient.php?id=<?=$u['id']?>">Открыть карту</a>
         </td>
       </tr>
     <?php endforeach; ?>
@@ -53,7 +52,11 @@ $users = $db->query("SELECT id, COALESCE(NULLIF(name_ru,''), name_lat) AS label,
   </div>
 
   <hr>
-  <p>Проект веб-приложение учёта прививок.</p>
+
+
+  <a class="btn" href="#" onclick="document.getElementById('newUser').style.display='block';return false;">+ Новый пользователь</a>
+  <p>Проект веб-приложения учёта прививок на <a href="https://github.com/Aligatorru/VaccinationTracker">GitHub</a> </p>
+
 </div>
 <script src="assets/js.js"></script>
 </body>
