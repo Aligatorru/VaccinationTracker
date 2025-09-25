@@ -15,7 +15,7 @@
 1. Клонируйте репозиторий на сервер:
    ```bash
    git clone https://github.com/Aligatorru/VaccinationTracker.git
-````
+   ```
 
 2. Настройте базу данных MySQL и импортируйте схему (если есть `db.sql`):
 
