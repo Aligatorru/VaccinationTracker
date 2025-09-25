@@ -55,7 +55,8 @@ $users = $db->query("SELECT id, COALESCE(NULLIF(name_ru,''), name_lat) AS label,
 
 
   <a class="btn" href="#" onclick="document.getElementById('newUser').style.display='block';return false;">+ Новый пользователь</a>
-  <p>Проект веб-приложения учёта прививок на <a href="https://github.com/Aligatorru/VaccinationTracker">GitHub</a> </p>
+  <!-- <p>Проект веб-приложения учёта прививок на <a href="https://github.com/Aligatorru/VaccinationTracker">GitHub</a> </p> -->
+  <p>Веб-приложение доступно только в домашней локальной сети</p>
 
 </div>
 <script src="assets/js.js"></script>
