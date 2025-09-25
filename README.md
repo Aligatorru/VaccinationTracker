@@ -11,7 +11,7 @@
 - Поддержка нескольких языков: русский, английский, испанский, португальский
 
 ## Пример
-  https://aligatorru.github.io/VaccinationTracker/
+  https://aligatorru.github.io/VaccinationTracker/exemple/pacients.html
 
 ## Установка
 
