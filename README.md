@@ -14,4 +14,4 @@
 
 1. Клонируйте репозиторий на сервер:
    ```bash
-   git clone https://github.com/username/vaccination-tracker.git
+   git clone https://github.com/Aligatorru/VaccinationTracker.git
