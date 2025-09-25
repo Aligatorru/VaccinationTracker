@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://192.168.11.11:76/github/index.php -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Пациенты</title><link rel="stylesheet" href="./pacients_files/style.css"></head>
+<body>
+<div class="container">
+  <h1>Пациенты</h1>
+  <a class="btn" href="http://192.168.11.11:76/github/index.php#" onclick="document.getElementById(&#39;newUser&#39;).style.display=&#39;block&#39;;return false;">+ Новый пользователь</a>
+  <table class="table">
+    <tbody><tr><th>Имя</th><th>Дата рождения</th><th>Действия</th></tr>
+          <tr>
+        <td><a href="http://192.168.11.11:76/github/patient.php?id=1">Кот Борис</a></td>
+        <td>2005-05-01</td>
+        <td>
+          <a class="small" href="http://192.168.11.11:76/github/patient.php?id=1">Открыть</a>
+        </td>
+      </tr>
+          <tr>
+        <td><a href="http://192.168.11.11:76/github/patient.php?id=2">Кошка Мурка</a></td>
+        <td>2010-08-31</td>
+        <td>
+          <a class="small" href="http://192.168.11.11:76/github/patient.php?id=2">Открыть</a>
+        </td>
+      </tr>
+      </tbody></table>
+
+  <div id="newUser" class="modal" style="display:none;">
+    <form method="post" class="card">
+      <h2>Новый пользователь</h2>
+      <input name="name_ru" placeholder="Имя (кириллица)" required="">
+      <input name="name_lat" placeholder="Имя (латиница)">
+      <input name="birth" type="date" placeholder="Дата рождения">
+      <select name="sex"><option value="m">М</option><option value="f">Ж</option><option value="o">Другое</option></select>
+      <input type="hidden" name="action" value="create_user">
+      <div class="actions">
+        <button class="btn" type="submit">Создать</button>
+        <a class="btn ghost" href="http://192.168.11.11:76/github/index.php#" onclick="document.getElementById(&#39;newUser&#39;).style.display=&#39;none&#39;;return false;">Отмена</a>
+      </div>
+    </form>
+  </div>
+
+  <hr>
+  <p>Проект веб-приложение учёта прививок.</p>
+</div>
+<script src="./pacients_files/js.js.Без названия"></script>
+
+
+</body></html>

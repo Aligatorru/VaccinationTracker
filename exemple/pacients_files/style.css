@@ -1,0 +1,16 @@
+/* assets/style.css - improved minimal styling */
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;color:#111;margin:0;padding:20px}
+.container{max-width:980px;margin:0 auto;background:#fff;padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid #eee;padding:8px;text-align:left}
+.btn{display:inline-block;padding:8px 12px;background:#1976d2;color:#fff;text-decoration:none;border-radius:6px}
+.btn.ghost{background:#f0f0f0;color:#111}
+.small{font-size:13px;margin-right:6px}
+.danger{color:#b71c1c}
+.card{display:block;padding:12px;background:#fff;border:1px solid #eee;border-radius:8px}
+input,select{display:block;padding:8px;margin:6px 0;width:100%;box-sizing:border-box}
+.actions{margin-top:8px}
+.modal{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.35);padding:40px;box-sizing:border-box}
+.lang-flags{margin:8px 0}
+.flag{margin-right:6px;text-decoration:none;font-size:20px}
+.controls{margin:8px 0}

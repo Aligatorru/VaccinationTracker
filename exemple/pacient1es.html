@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://192.168.11.11:76/github/patient.php?id=1&lang=es -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Paciente</title>
+
+  <style>
+    .controls { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px; }
+    .dropdown { position:relative; }
+    .dropdown-btn {
+      padding:5px 10px;
+      border:1px solid #ccc;
+      background:#f9f9f9;
+      cursor:pointer;
+    }
+    .dropdown-content {
+      display:none;
+      position:absolute;
+      background:#fff;
+      border:1px solid #ccc;
+      min-width:200px;
+      max-height:250px;
+      overflow:auto;
+      z-index:100;
+      padding:5px;
+    }
+    .dropdown.open .dropdown-content { display:block; }
+    .dropdown-content label { display:block; padding:2px 5px; cursor:pointer; }
+    .dropdown-content label:hover { background:#eee; }
+    .dropdown-content label {
+      display: flex;
+      align-items: center;    /* выравнивание по вертикали */
+      gap: 6px;               /* расстояние между чекбоксом и текстом */
+      padding: 4px 6px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.4;
+      user-select: none;
+    }
+
+    .dropdown-content input[type="checkbox"],
+    .dropdown-content input[type="radio"] {
+      width: auto !important;
+      margin: 0;              /* убираем стандартные отступы браузера */
+      flex-shrink: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./pacient1es_files/style.css">
+</head>
+<body>
+<div class="container">
+  <a class="btn" href="http://192.168.11.11:76/github/index.php">← Atrás</a>
+  <h1>Paciente: Boris</h1>
+    <p>Fecha de nacimiento: 01.05.2005 — Sexo: Masculino</p>
+
+
+  <div class="lang-flags">
+    <a class="flag" href="http://192.168.11.11:76/github/patient.php?id=1&amp;lang=ru">🇷🇺</a>
+    <a class="flag" href="http://192.168.11.11:76/github/patient.php?id=1&amp;lang=en">🇬🇧</a>
+    <a class="flag" href="http://192.168.11.11:76/github/patient.php?id=1&amp;lang=es">🇪🇸</a>
+    <a class="flag" href="http://192.168.11.11:76/github/patient.php?id=1&amp;lang=pt">🇵🇹</a>
+  </div>
+
+  <!-- Панель управления -->
+  <form method="get">
+  <input type="hidden" name="id" value="1">
+  <input type="hidden" name="lang" value="es">
+
+  <div class="controls">
+    <!-- сортировка -->
+    <div class="dropdown">
+      <div class="dropdown-btn">Ordenar</div>
+      <div class="dropdown-content">
+        <label><input type="radio" name="sort" value="date_desc" checked=""> </label>
+        <label><input type="radio" name="sort" value="date_asc"> </label>
+        <label><input type="radio" name="sort" value="alpha_asc"> </label>
+        <label><input type="radio" name="sort" value="alpha_desc"> </label>
+      </div>
+    </div>
+
+    <!-- фильтр по инфекциям -->
+    <div class="dropdown">
+      <div class="dropdown-btn">Filtro por infecciones</div>
+      <div class="dropdown-content">
+                  <label>
+            <input type="checkbox" name="filter[]" value="17" checked="">
+            VPH (Virus del papiloma humano)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="12" checked="">
+            Varicela          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="11" checked="">
+            Hepatitis A          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="10" checked="">
+            Hepatitis B          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="18" checked="">
+            Gripe          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="21" checked="">
+            Denge          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="3" checked="">
+            Difteria – Tétanos (Td)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="13" checked="">
+            Fiebre amarilla          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="2" checked="">
+            Tos ferina – Difteria – Tétanos (DTP/DTaP/dTpa)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="19" checked="">
+            Coronavirus (COVID-19)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="5" checked="">
+            Sarampión          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="8" checked="">
+            Sarampión – Rubéola (MR)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="9" checked="">
+            Sarampión – Paperas – Rubéola (Triple vírica)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="7" checked="">
+            Rubéola          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="16" checked="">
+            Meningocócica          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="6" checked="">
+            Paperas          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="15" checked="">
+            Neumocócica          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="4" checked="">
+            Poliomielitis (Polio)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="20" checked="">
+            Reacción de Mantoux (prueba)          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="14" checked="">
+            Rotavirus          </label>
+                  <label>
+            <input type="checkbox" name="filter[]" value="1" checked="">
+            Tuberculosis (BCG)          </label>
+              </div>
+    </div>
+
+    <!-- выбор столбцов -->
+    <div class="dropdown">
+      <div class="dropdown-btn">Columnas visibles</div>
+      <div class="dropdown-content">
+                  <label>
+            <input type="checkbox" name="columns[]" value="infection" checked="">
+            Infección          </label>
+                  <label>
+            <input type="checkbox" name="columns[]" value="dose" checked="">
+            Dosis          </label>
+                  <label>
+            <input type="checkbox" name="columns[]" value="date" checked="">
+            Fecha          </label>
+                  <label>
+            <input type="checkbox" name="columns[]" value="comment" checked="">
+            Comentario          </label>
+                  <label>
+            <input type="checkbox" name="columns[]" value="result" checked="">
+            Resultado          </label>
+                  <label>
+            <input type="checkbox" name="columns[]" value="series" checked="">
+            Serie          </label>
+              </div>
+    </div>
+
+    <button class="btn" type="submit">Guardar</button>
+  </div>
+</form>
+
+<script>
+document.querySelectorAll('.dropdown-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const dd = btn.parentElement;
+    dd.classList.toggle('open');
+  });
+});
+
+// закрытие при клике вне
+document.addEventListener('click',e=>{
+  document.querySelectorAll('.dropdown').forEach(dd=>{
+    if(!dd.contains(e.target)) dd.classList.remove('open');
+  });
+});
+</script>
+
+  <table class="table">
+    <tbody><tr>
+              <th>Infección</th>
+              <th>Dosis</th>
+              <th>Fecha</th>
+              <th>Comentario</th>
+              <th>Resultado</th>
+              <th>Serie</th>
+            <th>Acciones</th>
+    </tr>
+          <tr>
+        <td>Gripe</td>        <td></td>
+                    <td>
+                01.09.2025            </td>
+                <td></td>        <td></td>        <td></td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
+        <td>Fiebre amarilla</td>        <td>V</td>
+                    <td>
+                30.10.2024            </td>
+                <td>Не терять справку!</td>        <td></td>        <td>AR</td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
+        <td>Coronavirus (COVID-19)</td>        <td>V2</td>
+                    <td>
+                01.07.2020            </td>
+                <td></td>        <td></td>        <td>CV</td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
+        <td>Coronavirus (COVID-19)</td>        <td>V1</td>
+                    <td>
+                01.06.2020            </td>
+                <td></td>        <td></td>        <td>CV</td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
+        <td>Sarampión – Paperas – Rubéola (Triple vírica)</td>        <td>V1</td>
+                    <td>
+                05.05.2015            </td>
+                <td></td>        <td></td>        <td>502-3</td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
+        <td>Tuberculosis (BCG)</td>        <td></td>
+                    <td>
+                10.05.2005            </td>
+                <td></td>        <td></td>        <td>CATT-1</td>        <td>
+          
+          
+        </td>
+      </tr>
+      </tbody></table>
+
+  <hr>
+  <h2 id="formTitle">Agregar vacuna</h2>
+
+  
+  <!-- форма добавления/редактирования вакцинации -->
+  <form id="addVac" method="post" action="http://192.168.11.11:76/github/api.php">
+    <input type="hidden" name="action" value="add_vac">
+        <input type="hidden" name="user_id" value="1">
+    <label>Infección:
+      <select name="vaccine_id" id="vaccineSelect">
+        <option value="">-- elegir --</option>
+                  <option value="17">VPH (Virus del papiloma humano)</option>
+                  <option value="12">Varicela</option>
+                  <option value="11">Hepatitis A</option>
+                  <option value="10">Hepatitis B</option>
+                  <option value="18">Gripe</option>
+                  <option value="21">Denge</option>
+                  <option value="3">Difteria – Tétanos (Td)</option>
+                  <option value="13">Fiebre amarilla</option>
+                  <option value="2">Tos ferina – Difteria – Tétanos (DTP/DTaP/dTpa)</option>
+                  <option value="19">Coronavirus (COVID-19)</option>
+                  <option value="5">Sarampión</option>
+                  <option value="8">Sarampión – Rubéola (MR)</option>
+                  <option value="9">Sarampión – Paperas – Rubéola (Triple vírica)</option>
+                  <option value="7">Rubéola</option>
+                  <option value="16">Meningocócica</option>
+                  <option value="6">Paperas</option>
+                  <option value="15">Neumocócica</option>
+                  <option value="4">Poliomielitis (Polio)</option>
+                  <option value="20">Reacción de Mantoux (prueba)</option>
+                  <option value="14">Rotavirus</option>
+                  <option value="1">Tuberculosis (BCG)</option>
+                <option value="__new">Agregar nueva...</option>
+      </select>
+    </label>
+
+    <div id="newVaccineForm" style="display:none;">
+      <p>Si agrega una nueva infección — complete las traducciones:</p>
+      <input name="inf_ru" placeholder="Название (RU)">
+      <input name="inf_en" placeholder="Название (EN)">
+      <input name="inf_es" placeholder="Nombre (ES)">
+      <input name="inf_pt" placeholder="Nome (PT)">
+    </div>
+
+    <label>Dosis: <input name="dose" value="" placeholder="V, V1, V2, RV1..."></label>
+    <label>Fecha: <input name="date" type="date" value=""></label>
+    <label>Comentario: <input name="comment" value=""></label>
+    <label>Resultado: <input name="result" value=""></label>
+    <label>Serie de vacuna: <input name="series" value=""></label>
+    <div class="actions">
+      <button class="btn" type="submit">Agregar</button>
+          </div>
+  </form>
+
+  <hr>
+  <h3>Editar/Agregar infección (diccionario)</h3>
+  <form method="post" action="http://192.168.11.11:76/github/api.php">
+    <input type="hidden" name="action" value="edit_vaccine">
+    <label>Infección:
+      <select name="vaccine_id" id="vaccineEditSelect">
+        <option value="">-- elegir --</option>
+                  <option value="17">VPH (Virus del papiloma humano)</option>
+                  <option value="12">Varicela</option>
+                  <option value="11">Hepatitis A</option>
+                  <option value="10">Hepatitis B</option>
+                  <option value="18">Gripe</option>
+                  <option value="21">Denge</option>
+                  <option value="3">Difteria – Tétanos (Td)</option>
+                  <option value="13">Fiebre amarilla</option>
+                  <option value="2">Tos ferina – Difteria – Tétanos (DTP/DTaP/dTpa)</option>
+                  <option value="19">Coronavirus (COVID-19)</option>
+                  <option value="5">Sarampión</option>
+                  <option value="8">Sarampión – Rubéola (MR)</option>
+                  <option value="9">Sarampión – Paperas – Rubéola (Triple vírica)</option>
+                  <option value="7">Rubéola</option>
+                  <option value="16">Meningocócica</option>
+                  <option value="6">Paperas</option>
+                  <option value="15">Neumocócica</option>
+                  <option value="4">Poliomielitis (Polio)</option>
+                  <option value="20">Reacción de Mantoux (prueba)</option>
+                  <option value="14">Rotavirus</option>
+                  <option value="1">Tuberculosis (BCG)</option>
+                <option value="__new">Agregar nueva...</option>
+      </select>
+    </label>
+    <div id="vaccineEditForm" style="display:none;">
+      <input name="edit_inf_id" type="hidden">
+      <input name="inf_ru" placeholder="Название (RU)">
+      <input name="inf_en" placeholder="Название (EN)">
+      <input name="inf_es" placeholder="Nombre (ES)">
+      <input name="inf_pt" placeholder="Nome (PT)">
+      <div class="actions"><button class="btn" type="submit">Guardar</button></div>
+    </div>
+  </form>
+
+</div>
+
+<script>
+const vsel = document.getElementById('vaccineSelect');
+const newV = document.getElementById('newVaccineForm');
+if(vsel){ vsel.addEventListener('change', ()=>{ newV.style.display = vsel.value === '__new' ? 'block' : 'none'; }); }
+
+const editSel = document.getElementById('vaccineEditSelect');
+const editForm = document.getElementById('vaccineEditForm');
+if(editSel){ editSel.addEventListener('change', ()=> {
+    const val = editSel.value;
+    if (!val) { editForm.style.display='none'; return; }
+    if (val === '__new') {
+        editForm.style.display='block';
+        document.querySelector('input[name="edit_inf_id"]').value = '';
+        ['inf_ru','inf_en','inf_es','inf_pt'].forEach(n => document.querySelector('input[name="'+n+'"]').value='');
+        return;
+    }
+    fetch('api.php?action=get_vaccine&id='+val).then(r=>r.json()).then(data=>{
+        editForm.style.display='block';
+        document.querySelector('input[name="edit_inf_id"]').value = data.id || '';
+        document.querySelector('input[name="inf_ru"]').value = data.infection_name_ru || '';
+        document.querySelector('input[name="inf_en"]').value = data.infection_name_en || '';
+        document.querySelector('input[name="inf_es"]').value = data.infection_name_es || '';
+        document.querySelector('input[name="inf_pt"]').value = data.infection_name_pt || '';
+    });
+});}
+</script>
+
+
+
+</body></html>
