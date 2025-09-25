@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)https://aligatorru.github.io/VaccinationTracker/patient.php?id=1 -->
+<!-- saved from url=(0055)https://aligatorru.github.io/VaccinationTracker/patient.php?id=2&lang=es -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -47,25 +47,25 @@
     }
   </style>
 
-  <link rel="stylesheet" href="./pacient1es_files/style.css">
+  <link rel="stylesheet" href="./pacient2es_files/style.css">
 </head>
 <body>
 <div class="container">
   <a class="btn" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacients">← Atrás</a>
-  <h1>Paciente: Boris</h1>
-    <p>Fecha de nacimiento: 01.05.2005 — Sexo: Masculino</p>
+  <h1>Paciente: Murka</h1>
+    <p>Fecha de nacimiento: 31.08.2010 — Sexo: Feminino</p>
 
 
     <div class="lang-flags">
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1ru">🇷🇺</a>
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1gb">🇬🇧</a>
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1es">🇪🇸</a>
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1pt">🇵🇹</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2ru">🇷🇺</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2gb">🇬🇧</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2es">🇪🇸</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2pt">🇵🇹</a>
     </div>
 
   <!-- Панель управления -->
   <form method="get">
-  <input type="hidden" name="id" value="1">
+  <input type="hidden" name="id" value="2">
   <input type="hidden" name="lang" value="es">
 
   <div class="controls">
@@ -206,46 +206,37 @@ document.addEventListener('click',e=>{
             <th>Acciones</th>
     </tr>
           <tr>
+        <td>Difteria – Tétanos (Td)</td>        <td>V2</td>
+                    <td>
+                15.03.2020            </td>
+                <td></td>        <td></td>        <td>КАН</td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
+        <td>Rotavirus</td>        <td>RV</td>
+                    <td>
+                20.08.2018            </td>
+                <td></td>        <td></td>        <td>5592</td>        <td>
+          
+          
+        </td>
+      </tr>
+          <tr>
         <td>Gripe</td>        <td></td>
                     <td>
-                01.09.2025            </td>
-                <td></td>        <td></td>        <td></td>        <td>
+                01.09.2012            </td>
+                <td></td>        <td></td>        <td>GP12</td>        <td>
           
           
         </td>
       </tr>
           <tr>
-        <td>Fiebre amarilla</td>        <td>V</td>
+        <td>Gripe</td>        <td></td>
                     <td>
-                30.10.2024            </td>
-                <td>Не терять справку!</td>        <td></td>        <td>AR</td>        <td>
-          
-          
-        </td>
-      </tr>
-          <tr>
-        <td>Coronavirus (COVID-19)</td>        <td>V2</td>
-                    <td>
-                01.07.2020            </td>
-                <td></td>        <td></td>        <td>CV</td>        <td>
-          
-          
-        </td>
-      </tr>
-          <tr>
-        <td>Coronavirus (COVID-19)</td>        <td>V1</td>
-                    <td>
-                01.06.2020            </td>
-                <td></td>        <td></td>        <td>CV</td>        <td>
-          
-          
-        </td>
-      </tr>
-          <tr>
-        <td>Sarampión – Paperas – Rubéola (Triple vírica)</td>        <td>V1</td>
-                    <td>
-                05.05.2015            </td>
-                <td></td>        <td></td>        <td>502-3</td>        <td>
+                01.09.2011            </td>
+                <td></td>        <td></td>        <td>Gp10</td>        <td>
           
           
         </td>
@@ -253,8 +244,8 @@ document.addEventListener('click',e=>{
           <tr>
         <td>Tuberculosis (BCG)</td>        <td></td>
                     <td>
-                10.05.2005            </td>
-                <td></td>        <td></td>        <td>CATT-1</td>        <td>
+                10.09.2010            </td>
+                <td></td>        <td></td>        <td>190</td>        <td>
           
           
         </td>
@@ -266,9 +257,9 @@ document.addEventListener('click',e=>{
 
   
   <!-- форма добавления/редактирования вакцинации -->
-  <form id="addVac" method="post" action="https://aligatorru.github.io/VaccinationTracker/api.php">
+  <form id="addVac" method="post" action="https://aligatorru.github.io/VaccinationTrackerapi.php">
     <input type="hidden" name="action" value="add_vac">
-        <input type="hidden" name="user_id" value="1">
+        <input type="hidden" name="user_id" value="2">
     <label>Infección:
       <select name="vaccine_id" id="vaccineSelect">
         <option value="">-- elegir --</option>
@@ -317,7 +308,7 @@ document.addEventListener('click',e=>{
 
   <hr>
   <h3>Editar/Agregar infección (diccionario)</h3>
-  <form method="post" action="https://aligatorru.github.io/VaccinationTracker/api.php">
+  <form method="post" action="https://aligatorru.github.io/VaccinationTrackerapi.php">
     <input type="hidden" name="action" value="edit_vaccine">
     <label>Infección:
       <select name="vaccine_id" id="vaccineEditSelect">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)https://aligatorru.github.io/VaccinationTracker/patient.php?id=1 -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0055)https://aligatorru.github.io/VaccinationTracker/patient.php?id=2&lang=en -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Paciente</title>
+  <title>Patient</title>
 
   <style>
     .controls { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px; }
@@ -47,31 +47,31 @@
     }
   </style>
 
-  <link rel="stylesheet" href="./pacient1es_files/style.css">
+  <link rel="stylesheet" href="./pacient2gb_files/style.css">
 </head>
 <body>
 <div class="container">
-  <a class="btn" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacients">← Atrás</a>
-  <h1>Paciente: Boris</h1>
-    <p>Fecha de nacimiento: 01.05.2005 — Sexo: Masculino</p>
+  <a class="btn" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacients">← Back</a>
+  <h1>Patient: Murka</h1>
+    <p>Birthdate: 31.08.2010 — Sex: Female</p>
 
 
     <div class="lang-flags">
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1ru">🇷🇺</a>
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1gb">🇬🇧</a>
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1es">🇪🇸</a>
-      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient1pt">🇵🇹</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2ru">🇷🇺</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2gb">🇬🇧</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2es">🇪🇸</a>
+      <a class="flag" href="https://aligatorru.github.io/VaccinationTracker/exemple/pacient2pt">🇵🇹</a>
     </div>
 
   <!-- Панель управления -->
   <form method="get">
-  <input type="hidden" name="id" value="1">
-  <input type="hidden" name="lang" value="es">
+  <input type="hidden" name="id" value="2">
+  <input type="hidden" name="lang" value="en">
 
   <div class="controls">
     <!-- сортировка -->
     <div class="dropdown">
-      <div class="dropdown-btn">Ordenar</div>
+      <div class="dropdown-btn">Sort</div>
       <div class="dropdown-content">
         <label><input type="radio" name="sort" value="date_desc" checked=""> </label>
         <label><input type="radio" name="sort" value="date_asc"> </label>
@@ -82,14 +82,14 @@
 
     <!-- фильтр по инфекциям -->
     <div class="dropdown">
-      <div class="dropdown-btn">Filtro por infecciones</div>
+      <div class="dropdown-btn">Filter by infections</div>
       <div class="dropdown-content">
                   <label>
             <input type="checkbox" name="filter[]" value="17" checked="">
-            VPH (Virus del papiloma humano)          </label>
+            HPV (Human Papillomavirus)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="12" checked="">
-            Varicela          </label>
+            Chickenpox (Varicella)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="11" checked="">
             Hepatitis A          </label>
@@ -98,49 +98,49 @@
             Hepatitis B          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="18" checked="">
-            Gripe          </label>
+            Influenza          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="21" checked="">
             Denge          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="3" checked="">
-            Difteria – Tétanos (Td)          </label>
+            Diphtheria – Tetanus (Td)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="13" checked="">
-            Fiebre amarilla          </label>
+            Yellow fever          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="2" checked="">
-            Tos ferina – Difteria – Tétanos (DTP/DTaP/dTpa)          </label>
+            Pertussis – Diphtheria – Tetanus (DTP/DTaP/dTpa)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="19" checked="">
             Coronavirus (COVID-19)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="5" checked="">
-            Sarampión          </label>
+            Measles          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="8" checked="">
-            Sarampión – Rubéola (MR)          </label>
+            Measles – Rubella (MR)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="9" checked="">
-            Sarampión – Paperas – Rubéola (Triple vírica)          </label>
+            Measles – Mumps – Rubella (MMR)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="7" checked="">
-            Rubéola          </label>
+            Rubella          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="16" checked="">
-            Meningocócica          </label>
+            Meningococcal          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="6" checked="">
-            Paperas          </label>
+            Mumps          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="15" checked="">
-            Neumocócica          </label>
+            Pneumococcal          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="4" checked="">
-            Poliomielitis (Polio)          </label>
+            Poliomyelitis (Polio)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="20" checked="">
-            Reacción de Mantoux (prueba)          </label>
+            Mantoux reaction (test)          </label>
                   <label>
             <input type="checkbox" name="filter[]" value="14" checked="">
             Rotavirus          </label>
@@ -152,30 +152,30 @@
 
     <!-- выбор столбцов -->
     <div class="dropdown">
-      <div class="dropdown-btn">Columnas visibles</div>
+      <div class="dropdown-btn">Displayed columns</div>
       <div class="dropdown-content">
                   <label>
             <input type="checkbox" name="columns[]" value="infection" checked="">
-            Infección          </label>
+            Infection          </label>
                   <label>
             <input type="checkbox" name="columns[]" value="dose" checked="">
-            Dosis          </label>
+            Dose          </label>
                   <label>
             <input type="checkbox" name="columns[]" value="date" checked="">
-            Fecha          </label>
+            Date          </label>
                   <label>
             <input type="checkbox" name="columns[]" value="comment" checked="">
-            Comentario          </label>
+            Comment          </label>
                   <label>
             <input type="checkbox" name="columns[]" value="result" checked="">
-            Resultado          </label>
+            Result          </label>
                   <label>
             <input type="checkbox" name="columns[]" value="series" checked="">
-            Serie          </label>
+            Series          </label>
               </div>
     </div>
 
-    <button class="btn" type="submit">Guardar</button>
+    <button class="btn" type="submit">Save</button>
   </div>
 </form>
 
@@ -197,55 +197,46 @@ document.addEventListener('click',e=>{
 
   <table class="table">
     <tbody><tr>
-              <th>Infección</th>
-              <th>Dosis</th>
-              <th>Fecha</th>
-              <th>Comentario</th>
-              <th>Resultado</th>
-              <th>Serie</th>
-            <th>Acciones</th>
+              <th>Infection</th>
+              <th>Dose</th>
+              <th>Date</th>
+              <th>Comment</th>
+              <th>Result</th>
+              <th>Series</th>
+            <th>Actions</th>
     </tr>
           <tr>
-        <td>Gripe</td>        <td></td>
+        <td>Diphtheria – Tetanus (Td)</td>        <td>V2</td>
                     <td>
-                01.09.2025            </td>
-                <td></td>        <td></td>        <td></td>        <td>
+                15.03.2020            </td>
+                <td></td>        <td></td>        <td>КАН</td>        <td>
           
           
         </td>
       </tr>
           <tr>
-        <td>Fiebre amarilla</td>        <td>V</td>
+        <td>Rotavirus</td>        <td>RV</td>
                     <td>
-                30.10.2024            </td>
-                <td>Не терять справку!</td>        <td></td>        <td>AR</td>        <td>
+                20.08.2018            </td>
+                <td></td>        <td></td>        <td>5592</td>        <td>
           
           
         </td>
       </tr>
           <tr>
-        <td>Coronavirus (COVID-19)</td>        <td>V2</td>
+        <td>Influenza</td>        <td></td>
                     <td>
-                01.07.2020            </td>
-                <td></td>        <td></td>        <td>CV</td>        <td>
+                01.09.2012            </td>
+                <td></td>        <td></td>        <td>GP12</td>        <td>
           
           
         </td>
       </tr>
           <tr>
-        <td>Coronavirus (COVID-19)</td>        <td>V1</td>
+        <td>Influenza</td>        <td></td>
                     <td>
-                01.06.2020            </td>
-                <td></td>        <td></td>        <td>CV</td>        <td>
-          
-          
-        </td>
-      </tr>
-          <tr>
-        <td>Sarampión – Paperas – Rubéola (Triple vírica)</td>        <td>V1</td>
-                    <td>
-                05.05.2015            </td>
-                <td></td>        <td></td>        <td>502-3</td>        <td>
+                01.09.2011            </td>
+                <td></td>        <td></td>        <td>Gp10</td>        <td>
           
           
         </td>
@@ -253,8 +244,8 @@ document.addEventListener('click',e=>{
           <tr>
         <td>Tuberculosis (BCG)</td>        <td></td>
                     <td>
-                10.05.2005            </td>
-                <td></td>        <td></td>        <td>CATT-1</td>        <td>
+                10.09.2010            </td>
+                <td></td>        <td></td>        <td>190</td>        <td>
           
           
         </td>
@@ -262,88 +253,88 @@ document.addEventListener('click',e=>{
       </tbody></table>
 
   <hr>
-  <h2 id="formTitle">Agregar vacuna</h2>
+  <h2 id="formTitle">Add vaccination</h2>
 
   
   <!-- форма добавления/редактирования вакцинации -->
-  <form id="addVac" method="post" action="https://aligatorru.github.io/VaccinationTracker/api.php">
+  <form id="addVac" method="post" action="https://aligatorru.github.io/VaccinationTrackerapi.php">
     <input type="hidden" name="action" value="add_vac">
-        <input type="hidden" name="user_id" value="1">
-    <label>Infección:
+        <input type="hidden" name="user_id" value="2">
+    <label>Infection:
       <select name="vaccine_id" id="vaccineSelect">
-        <option value="">-- elegir --</option>
-                  <option value="17">VPH (Virus del papiloma humano)</option>
-                  <option value="12">Varicela</option>
+        <option value="">-- select --</option>
+                  <option value="17">HPV (Human Papillomavirus)</option>
+                  <option value="12">Chickenpox (Varicella)</option>
                   <option value="11">Hepatitis A</option>
                   <option value="10">Hepatitis B</option>
-                  <option value="18">Gripe</option>
+                  <option value="18">Influenza</option>
                   <option value="21">Denge</option>
-                  <option value="3">Difteria – Tétanos (Td)</option>
-                  <option value="13">Fiebre amarilla</option>
-                  <option value="2">Tos ferina – Difteria – Tétanos (DTP/DTaP/dTpa)</option>
+                  <option value="3">Diphtheria – Tetanus (Td)</option>
+                  <option value="13">Yellow fever</option>
+                  <option value="2">Pertussis – Diphtheria – Tetanus (DTP/DTaP/dTpa)</option>
                   <option value="19">Coronavirus (COVID-19)</option>
-                  <option value="5">Sarampión</option>
-                  <option value="8">Sarampión – Rubéola (MR)</option>
-                  <option value="9">Sarampión – Paperas – Rubéola (Triple vírica)</option>
-                  <option value="7">Rubéola</option>
-                  <option value="16">Meningocócica</option>
-                  <option value="6">Paperas</option>
-                  <option value="15">Neumocócica</option>
-                  <option value="4">Poliomielitis (Polio)</option>
-                  <option value="20">Reacción de Mantoux (prueba)</option>
+                  <option value="5">Measles</option>
+                  <option value="8">Measles – Rubella (MR)</option>
+                  <option value="9">Measles – Mumps – Rubella (MMR)</option>
+                  <option value="7">Rubella</option>
+                  <option value="16">Meningococcal</option>
+                  <option value="6">Mumps</option>
+                  <option value="15">Pneumococcal</option>
+                  <option value="4">Poliomyelitis (Polio)</option>
+                  <option value="20">Mantoux reaction (test)</option>
                   <option value="14">Rotavirus</option>
                   <option value="1">Tuberculosis (BCG)</option>
-                <option value="__new">Agregar nueva...</option>
+                <option value="__new">Add new...</option>
       </select>
     </label>
 
     <div id="newVaccineForm" style="display:none;">
-      <p>Si agrega una nueva infección — complete las traducciones:</p>
+      <p>If you add a new infection — fill in translations:</p>
       <input name="inf_ru" placeholder="Название (RU)">
       <input name="inf_en" placeholder="Название (EN)">
       <input name="inf_es" placeholder="Nombre (ES)">
       <input name="inf_pt" placeholder="Nome (PT)">
     </div>
 
-    <label>Dosis: <input name="dose" value="" placeholder="V, V1, V2, RV1..."></label>
-    <label>Fecha: <input name="date" type="date" value=""></label>
-    <label>Comentario: <input name="comment" value=""></label>
-    <label>Resultado: <input name="result" value=""></label>
-    <label>Serie de vacuna: <input name="series" value=""></label>
+    <label>Dose: <input name="dose" value="" placeholder="V, V1, V2, RV1..."></label>
+    <label>Date: <input name="date" type="date" value=""></label>
+    <label>Comment: <input name="comment" value=""></label>
+    <label>Result: <input name="result" value=""></label>
+    <label>Vaccine series: <input name="series" value=""></label>
     <div class="actions">
-      <button class="btn" type="submit">Agregar</button>
+      <button class="btn" type="submit">Add</button>
           </div>
   </form>
 
   <hr>
-  <h3>Editar/Agregar infección (diccionario)</h3>
-  <form method="post" action="https://aligatorru.github.io/VaccinationTracker/api.php">
+  <h3>Edit/Add infection (dictionary)</h3>
+  <form method="post" action="https://aligatorru.github.io/VaccinationTrackerapi.php">
     <input type="hidden" name="action" value="edit_vaccine">
-    <label>Infección:
+    <label>Infection:
       <select name="vaccine_id" id="vaccineEditSelect">
-        <option value="">-- elegir --</option>
-                  <option value="17">VPH (Virus del papiloma humano)</option>
-                  <option value="12">Varicela</option>
+        <option value="">-- select --</option>
+                  <option value="17">HPV (Human Papillomavirus)</option>
+                  <option value="12">Chickenpox (Varicella)</option>
                   <option value="11">Hepatitis A</option>
                   <option value="10">Hepatitis B</option>
-                  <option value="18">Gripe</option>
+                  <option value="18">Influenza</option>
                   <option value="21">Denge</option>
-                  <option value="3">Difteria – Tétanos (Td)</option>
-                  <option value="13">Fiebre amarilla</option>
-                  <option value="2">Tos ferina – Difteria – Tétanos (DTP/DTaP/dTpa)</option>
+                  <option value="3">Diphtheria – Tetanus (Td)</option>
+                  <option value="13">Yellow fever</option>
+                  <option value="2">Pertussis – Diphtheria – Tetanus (DTP/DTaP/dTpa)</option>
                   <option value="19">Coronavirus (COVID-19)</option>
-                  <option value="5">Sarampión</option>
-                  <option value="8">Sarampión – Rubéola (MR)</option>
-                  <option value="9">Sarampión – Paperas – Rubéola (Triple vírica)</option>
-                  <option value="7">Rubéola</option>
-                  <option value="16">Meningocócica</option>
-                  <option value="6">Paperas</option>
-                  <option value="15">Neumocócica</option>
-                  <option value="4">Poliomielitis (Polio)</option>
-                  <option value="20">Reacción de Mantoux (prueba)</option>
+                  <option value="5">Measles</option>
+                  <option value="8">Measles – Rubella (MR)</option>
+                  <option value="9">Measles – Mumps – Rubella (MMR)</option>
+                  <option value="7">Rubella</option>
+                  <option value="16">Meningococcal</option>
+                  <option value="6">Mumps</option>
+                  <option value="15">Pneumococcal</option>
+                  <option value="4">Poliomyelitis (Polio)</option>
+                  <option value="20">Mantoux reaction (test)</option>
                   <option value="14">Rotavirus</option>
                   <option value="1">Tuberculosis (BCG)</option>
-                <option value="__new">Agregar nueva...</option>
+                <option value="__new">Add new...</option>
       </select>
     </label>
     <div id="vaccineEditForm" style="display:none;">
@@ -352,7 +343,7 @@ document.addEventListener('click',e=>{
       <input name="inf_en" placeholder="Название (EN)">
       <input name="inf_es" placeholder="Nombre (ES)">
       <input name="inf_pt" placeholder="Nome (PT)">
-      <div class="actions"><button class="btn" type="submit">Guardar</button></div>
+      <div class="actions"><button class="btn" type="submit">Save</button></div>
     </div>
   </form>
 
